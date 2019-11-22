@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { brotliDecompress } from "zlib";
 
 const Wrapper = styled.div`
-width: 100vw;
+width: 100%;
 height: 68px;
 display: flex;
 padding: 20px 58px;
 box-sizing: border-box;
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 3;
 `;
 
 const Logo = styled.img`
@@ -30,7 +36,7 @@ color: #e5e5e5;
 
 &:active{
     font-weight: bold;
-    color: #000;
+    color: #fff;
 }
 &:hover{
     font-weight: normal;
